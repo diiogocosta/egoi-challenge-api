@@ -4,7 +4,7 @@
 
 Considerando que já possui o PHP e composer instalado na maquina local, após fazer clone deste repositório rodar os seguintes comandos na pasta do projeto:
 ```bash
-$ composer install
+$ composer install ou composer update {caso nao esteja com seus pacotes atualizados}
 $ php -S 0.0.0.0:3000 -t public
 ```
 
