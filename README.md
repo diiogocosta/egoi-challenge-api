@@ -14,5 +14,15 @@ A partir deste momento um servidor estará disponivel em http://localhost:3000
 Segue o endereço das api's para crud:
 
 Método: GET
-/api/category /* Busca todas as categorias hierarquicamente */
+**/api/category**
+**/api/category/{id}**
+
+Método POST
+**/api/category**
+
+Método PUT
+**/api/category/{id}**
+
+Método DELETE
+**/api/category/{id}**
 
