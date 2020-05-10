@@ -2,8 +2,9 @@
 
 ## Instalação
 
-Considerando que já possui o PHP e composer instalado na maquina local, após fazer clone deste repositório rodar o seguinte comando:
+Considerando que já possui o PHP e composer instalado na maquina local, após fazer clone deste repositório rodar os seguintes comandos na pasta do projeto:
 ```bash
+$ composer install
 $ php -S 0.0.0.0:3000 -t public
 ```
 
@@ -13,16 +14,16 @@ A partir deste momento um servidor estará disponivel em http://localhost:3000
 
 Segue o endereço das api's para crud:
 
-Método: GET
-**/api/category**
-**/api/category/{id}**
+Método: GET<br/>
+**/api/category**<br/>
+**/api/category/{id}**<br/>
 
-Método POST
-**/api/category**
+Método POST<br/>
+**/api/category**<br/>
 
-Método PUT
-**/api/category/{id}**
+Método PUT<br/>
+**/api/category/{id}**<br/>
 
-Método DELETE
-**/api/category/{id}**
+Método DELETE<br/>
+**/api/category/{id}**<br/>
 
