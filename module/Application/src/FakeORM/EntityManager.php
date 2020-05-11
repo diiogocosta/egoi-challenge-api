@@ -21,11 +21,17 @@ class EntityManager {
     return json_decode(file_get_contents(__DIR__ . '/../../data/db.json'), true);
   }
 
-  public function findAll($flat = false, $dependentId = null) {
+  public function findAll($flat = false, $dependentId = null, $search = null) {
     $result = $this->dataArray;
     if (is_int($dependentId)) {
       $result = array_values(array_filter($result, function($item) use($result, $dependentId){
         return !in_array($item['id'], Helpers::getDependentIds($result, $dependentId));
+      }));
+    }
+
+    if ($search != '' && isset($search)) {
+      $result = array_values(array_filter($result, function($item) use($search){
+        return strpos(strtoupper($item['name']), strtoupper($search)) !== false;
       }));
     }
 

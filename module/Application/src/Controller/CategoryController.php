@@ -19,7 +19,9 @@ class CategoryController extends AbstractRestfulController
     $repository = new EntityManager();
     $flat = filter_var($this->request->getQuery()['flat'], FILTER_VALIDATE_BOOLEAN);
     $dependentId = filter_var($this->request->getQuery()['dependentId'], FILTER_VALIDATE_INT);
-    return new JsonModel($repository->findAll($flat, $dependentId));
+    $search = $this->request->getQuery()['search'];
+
+    return new JsonModel($repository->findAll($flat, $dependentId, $search));
   }
 
   public function get($id) {
